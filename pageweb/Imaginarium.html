@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title> Imaginarium</title>                         
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="imaginarium.css"/>
+        <link rel="icon"  href="images/spirale.png" />
+        
+    
+    </head>
+
+    <body> 
+    
+        
+    <!--élements présents tout au long du jeu:-->
+    
+        <!--titre-->
+        <h1>Imaginarium</h1> 
+        
+        
+    <!--tableau du score-->
+    <table border cellspacing="0"  >
+        <tbody>
+            <tr>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td><div id="pts"></div>PTS</td>
+            </tr>
+         </tbody>
+    </table>
+     
+    
+    <!--temps-->
+    <img id="sablier" src="images/sablier.gif"/>
+    <h2 id="temps">Temps</h2>
+        
+        
+        
+      
+   <!--page d'acceuil -->     
+    <div id="accueil">
+          
+    <!--pseudo-->
+<h2><span id="pseudo">Entre ton pseudo</span></h2>
+<input type="text" maxlength="10" id="valeurpseudo" value=''>
+ 
+          
+    <!--règles du jeu-->               
+<h2 id=jeu>Règles du jeu</h2>
+            <div id="regle"> <br/>Le but du jeu est de répondre 
+                             <br/>à des questions posées sur des
+                             <br/>images pendant un temps imparti.
+                             <br/>Chaque bonne réponse 
+                             <br/>te rapporte un point.
+            </div>
+<h2 id=jeu2>Bonne chance !</h2>   
+    
+        
+
+    <!--bouton start-->      
+<input type='button' id="start" name="Start" value='Start' onclick='start();bips();finish();' />
+		
+    </div>
+        
+  
+    <!--page photos-->
+    <div id='jeu_photo'>       
+        <div id="prenom"> </div> <!-- permet d'afficher le pseudo--> 
+        <div id="compte"></div>   <!--permet d'afficher le tps restant-->
+        
+        <div class="image" id="img1"><img  src="images/avion.jpg"></div>
+        
+        <div class="image" id="img2"><img  src="images/bus.jpg"></div>
+        
+        <div class="image" id="img3"><img  src="images/cuisine.jpg"></div>
+        
+        <div class="image" id="img4"><img  src="images/fa%C3%A7ade.jpg"></div>
+        
+        <div class="image" id="img5"><img src="images/plant.jpg"></div>
+    
+        <div class="image" id="img6"><img src="images/poulpe.jpg"></div>
+    
+        <div class="image" id="img7"><img src="images/salon.jpg"></div>
+       
+        <div class="image" id="img8"><img src="images/salonblanc.jpg"></div>
+        
+        <div class="image" id="img9"><img src="images/ski.jpg"></div>
+    
+        <div class="image" id="img10"><img src="images/tennis.jpg"></div>
+        
+    </div>
+        
+        
+        
+        <!--page de questions-->
+        <div id="question"></div> 
+    
+    <form id='jeu_questions' name="question">
+    
+        <!--questions de l'image 1-->
+        <div id="image1">
+            <span class="question1">1-Combien y a-t'il de hublots?</span>
+            
+            <input type="radio" value="3" name="Question1" class=reponse_a>
+                <a id=reponsea>3</a>
+            
+            <input type="radio" value="4" name="question1" class=reponse_b>
+                <a id=reponseb>4</a>
+            
+            <input type="radio" value="5" name="question1" class=reponse_c >
+                <a id=reponsec>5</a>
+        <br>
+         
+        <span class="question2">2-De quelle couleur est la valise du Playmobil?</span>
+        
+            <input type="radio" value="rouge" name="question2" class=reponse_d >
+                <a id=reponsed>rouge</a>
+        
+            <input type="radio" value="verte" name="Question2" class=reponse_e>
+                <a id=reponsee>verte</a>
+        
+            <input type="radio" value="bleue" name="question2" class=reponse_f>
+                <a id=reponsef>bleue</a>
+        <br>
+            
+        <span class="question3">3-Quel est le logo affiché sur l'avion?</span>
+        
+            <input type="radio" value=" 2 oiseaux" name="question3" class=reponse_g>
+                <a id=reponseg> 2 oiseaux</a>
+        
+            <input type="radio" value="2 dauphins" name="Question3" class=reponse_h>
+                <a id=reponseh>2 dauphins</a>
+        
+            <input type="radio" value="soleil" name="question3" class=reponse_i>
+                <a id=reponsei>un soleil</a> 
+        
+            <input type="button" class="valider" id="valider3" value="valider" onclick = "verification();valider();bips();"> 
+        
+        </div>
+        
+      
+        
+        <!--questions de l'image 2-->
+        
+    <div id="image2">
+          
+        <span class="question1">1-Quel est le nombre inscrit sur le bus?</span>
+        
+          <input type="radio" value="11" name="question4" class=reponse_a>
+                <a id=reponsea>11</a>
+          
+          <input type="radio" value="16" name="question4" class=reponse_b>
+                <a id=reponseb>16</a>
+        
+          <input type="radio" value="19" name="Question4" class=reponse_c>
+                <a id=reponsec>19</a>
+        <br>
+         
+        <span class="question2">2-Quelle est la couleur de cheveux des jumeaux?</span>
+        
+          <input type="radio" value="blond" name="question5" class=reponse_d>
+                <a id=reponsed>blond</a>
+        
+          <input type="radio" value="roux" name="Question5" class=reponse_e>
+                <a id=reponsee>roux</a>
+        
+          <input type="radio" value="brun" name="question5" class=reponse_f>
+                <a id=reponsef>brun</a>
+        <br>
+            
+        <span class="question3">3-Combien y a-t-il de filles ?</span>
+        
+          <input type="radio" value="0" name="question6" class=reponse_g>
+                <a id=reponseg>0</a>
+        
+          <input type="radio" value="1" name="question6" class=reponse_h>
+                <a id=reponseh>1</a>
+        <input type="radio" value="2" name="Question6" class=reponse_i>
+                <a id=reponsei>2</a> 
+          
+          <input type="button" class="valider" id="valider3" value="valider" onclick = "verification();valider();bips();">
+    </div>
+        
+        
+        
+        <div id="image3"><span class="question1">1-Quelle heure est-il sur l’horloge ?</span>
+        <input type="radio" value="8h03" name="question7" class=reponse_a>
+        <a id=reponsea>8h03</a>
+        <input type="radio" value="12h40" name="Question7" class=reponse_b>
+        <a id=reponseb>12h40</a>
+        <input type="radio" value="15h20" name="question7" class=reponse_c>
+        <a id=reponsec>15h20</a>
+        <br>
+         
+        <span class="question2">2-combien y a-t-il de lampes?</span>
+        <input type="radio" value="3" name="question8" class=reponse_d>
+        <a id=reponsed>3</a>
+        <input type="radio" value="4" name="Question8" class=reponse_e>
+        <a id=reponsee>4</a>
+        <input type="radio" value="5" name="question8" class=reponse_f>
+        <a id=reponsef>5</a>
+        <br>
+            
+        <span class="question3">3-De quelle couleur sont les chaises ?</span>
+        <input type="radio" value="blanches" name="Question9" class=reponse_g>
+        <a id=reponseg>blanches</a>
+        <input type="radio" value="grises" name="question9" class=reponse_h>
+        <a id=reponseh>grises</a>
+        <input type="radio" value="noires" name="question9" class=reponse_i>
+        <a id=reponsei>noires</a> 
+        <input type="button" class="valider" id="valider3" value="valider" onclick = "verification();valider();bips();">
+        </div>
+        
+        
+        
+        
+        <div id="image4"><span class="question1">1-Combien y a-t-il de fenêtres?</span>
+        <input type="radio" value="4" name="question10" class=reponse_a>
+        <a id=reponsea>4</a>
+        <input type="radio" value="3" name="Question10" class=reponse_b>
+        <a id=reponseb>3</a>
+        <input type="radio" value="5" name="question10" class=reponse_c>
+        <a id=reponsec>5</a>
+        <br>
+         
+        <span class="question2">2-Quelle est la couleur des tongs de la fille ?</span>
+        <input type="radio" value="marron" name="question11" class=reponse_d>
+        <a id=reponsed>marron</a>
+        <input type="radio" value="orange" name="question11" class=reponse_e>
+        <a id=reponsee>orange</a>
+        <input type="radio" value="rose" name="Question11" class=reponse_f>
+        <a id=reponsef>rose</a>
+        <input type="button" class="valider" id="valider2" value="valider" onclick = "verification();valider();bips();">
+        </div>  
+       
+    
+        
+        <div id="image5"><span class="question1">1-Combien y-a-t -il d’étapes sur la photo ?</span>
+        <input type="radio" value="4" name="question12" class=reponse_a>
+        <a id=reponsea>4</a>
+        <input type="radio" value="5" name="Question12" class=reponse_b>
+        <a id=reponseb>5</a>
+        <input type="radio" value="6" name="question12" class=reponse_c>
+        <a id=reponsec>6</a>
+        <br>
+         
+        <span class="question2">2-Combien y-a-t ’il de feuilles sur l’image ?</span>
+        <input type="radio" value="4" name="question13" class=reponse_d>
+        <a id=reponsed>4</a>
+        <input type="radio" value="6" name="Question13" class=reponse_e>
+        <a id=reponsee>6</a>
+        <input type="radio" value="8" name="question13" class=reponse_f>
+        <a id=reponsef>8</a>
+        <input type="button" class="valider" id="valider2" value="valider" onclick = "verification();valider();bips();">
+        </div>  
+        
+        
+        <div id="image6"><span class="question1">1-Combien y a til de tentacules sur l’image ?</span>
+        <input type="radio" value="7" name="Question14" class=reponse_a>
+        <a id=reponsea>7</a>
+        <input type="radio" value="6" name="question14" class=reponse_b>
+        <a id=reponseb>6</a>
+        <input type="radio" value="5" name="question14" class=reponse_c>
+        <a id=reponsec>5</a>
+        <br>
+         
+        <span class="question2">2-Combien y a-t-il de minerais ?</span>
+        <input type="radio" value="6" name="question15" class=reponse_d>
+        <a id=reponsed>6</a>
+        <input type="radio" value="5" name="question15" class=reponse_e>
+        <a id=reponsee>5</a>
+        <input type="radio" value="7" name="Question15" class=reponse_f>
+        <a id=reponsef>7</a>
+        <br>
+            
+        <span class="question3">3-Que tiens dans sa main  gauche poséidon ?</span>
+        <input type="radio" value="un trident" name="Question16" class=reponse_g>
+        <a id=reponseg>un trident</a>
+        <input type="radio" value="une tortue" name="question16" class=reponse_h>
+        <a id=reponseh>une tortue</a>
+        <input type="radio" value="un minerais" name="question16" class=reponse_i>
+        <a id=reponsei>un minerais</a>
+        <input type="button" class="valider" id="valider3" value="valider" onclick = "verification();valider();bips();">
+        </div>
+        
+        
+        
+        <div id="image7"><span class="question1">1-Quel est l'auteur du tableau ?</span>
+        <input type="radio" value="Pablo Picasso" name="question17" class=reponse_a>
+        <a id=reponsea>Pablo<br>Picasso</a>
+        <input type="radio" value="Pierre-Auguste Renoir" name="question17" class=reponse_b>
+        <a id=reponseb>Pierre-Auguste<br>Renoir</a>
+        <input type="radio" value="Gustav Klimt" name="Question17" class=reponse_c>
+        <a id=reponsec>Gustav Klimt</a>
+        <br>
+         
+        <span class="question2">2-Combien y a til de coussin sur le canapé ?</span>
+        <input type="radio" value="3" name="question18" class=reponse_d>
+        <a id=reponsed>3</a>
+        <input type="radio" value="4" name="Question18" class=reponse_e>
+        <a id=reponsee>4</a>
+        <input type="radio" value="2" name="question18" class=reponse_f>
+        <a id=reponsef>2</a>
+        <input type="button" class="valider" id="valider2" value="valider" onclick = "verification();valider();bips();">
+        </div>  
+        
+        
+        <div id="image8"><span class="question1">1-Combien y-at-il de coussins rayés?</span>
+        <input type="radio" value="1" name="question19" class=reponse_a>
+        <a id=reponsea>1</a>
+        <input type="radio" value="3" name="Question19" class=reponse_b>
+        <a id=reponseb>3</a>
+        <input type="radio" value="2" name="question19" class=reponse_c>
+        <a id=reponsec>2</a>
+        <br>
+         
+        <span class="question2">2-Combien y-at-il de tableaux ?</span>
+        <input type="radio" value="5" name="question20" class=reponse_d>
+        <a id=reponsed>5</a>
+        <input type="radio" value="3" name="question20" class=reponse_e>
+        <a id=reponsee>3</a>
+        <input type="radio" value="6" name="question20" class=reponse_f>
+        <a id=reponsef>6</a>
+        <br>
+            
+        <span class="question3">3-Couleur du coussin gauche ?</span>
+        <input type="radio" value="noir" name="question21" class=reponse_g>
+        <a id=reponseg>noir</a>
+        <input type="radio" value="gris" name="Question21" class=reponse_h>
+        <a id=reponseh>gris</a>
+        <input type="radio" value="blanc" name="question21" class=reponse_i>
+          <a id=reponsei>blanc</a>
+        <input type="button" class="valider" id="valider3" value="valider" onclick = "verification();valider();bips();">
+        </div>
+        
+        
+        
+        <div id="image9"><span class="question1">1-Combien t-a-t-il de personnes?</span>
+        <input type="radio" value="6" name="Question22" class=reponse_a>
+        <a id=reponsea>6</a>
+        <input type="radio" value="5" name="question22" class=reponse_b>
+        <a id=reponseb>5</a>
+        <input type="radio" value="7" name="question22" class=reponse_c>
+        <a id=reponsec>7</a>
+        <br>
+         
+        <span class="question2">2-Deux personnes ont la même couleur de pantalon,<br> quelle est cette couleur ?</span>
+        <input type="radio" value="bleue" name="question23" class=reponse_d>
+        <a id=reponsed>bleue</a>
+        <input type="radio" value="rouge" name="question23" class=reponse_e>
+        <a id=reponsee>rouge</a>
+        <input type="radio" value="orange" name="Question23" class=reponse_f>
+        <a id=reponsef>orange</a>
+        <input type="button" class="valider" id="valider2" value="valider" onclick = "verification();valider();bips();">
+        </div>  
+      
+       
+        
+        <div id="image10"><span class="question1">1-Quel est le sport représenté ici ?</span>
+        <input type="radio" value="Rugdy" name="question24" class=reponse_a>
+        <a id=reponsea>Rugby</a>
+        <input type="radio" value="Tennis" name="Question24" class=reponse_b>
+        <a id=reponseb>Tennis</a>
+        <input type="radio" value="Badminton" name="question24" class=reponse_c>
+        <a id=reponsec>Badminton</a>
+        <br>
+         
+        <span class="question2">2-Qu’est-il écrit sur le tag ?</span>
+        <input type="radio" value="Boule de break" name="question25" class=reponse_d>
+        <a id=reponsed>Boule<br>de break</a>
+        <input type="radio" value="Balle de math" name="question25" class=reponse_e>
+        <a id=reponsee>Balle<br>de math</a>
+        <input type="radio" value="Balle de match" name="Question25" class=reponse_f>
+        <a id=reponsef>Balle<br>de match</a>
+        <br>
+            
+        <span class="question3">3-Combien y-a-t-il de balles ?</span>
+        <input type="radio" value="2" name="question26" class=reponse_g>
+        <a id=reponseg>2</a>
+        <input type="radio" value="3" name="question26" class=reponse_h>
+        <a id=reponseh>3</a>
+        <input type="radio" value="4" name="Question26" class=reponse_i>
+        <a id=reponsei>4</a>
+        <br>  
+                
+            
+        <span class="question4">4-Quel est le numéro visible 3 fois sur le tag ?</span>
+        <input type="radio" value="15" name="question27" class=reponse_j>
+        <a id=reponsej>15</a>
+        <input type="radio" value="40" name="question27" class=reponse_k>
+        <a id=reponsek>40</a>
+        <input type="radio" value="30" name="Question27" class=reponse_l>
+          <a id=reponsel>30</a> 
+        <input type="button" class="valider" id="valider4" value="valider" onclick = "verification();valider();bips();">
+         </div>
+        
+    
+        
+      
+ 
+        
+</form>
+       
+         
+     <script type="text/javascript" src="scriptweb.js"></script>    
+    
+    </body>

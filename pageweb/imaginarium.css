@@ -1,0 +1,485 @@
+body{   
+    background: linear-gradient(to bottom left, #12B8BD 50%, #7092BE  50%); 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-position: center;
+    margin:auto;
+    width: 1200px;
+    font-family: Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: bold; 
+}
+
+
+h1{
+    text-align:center;
+    font-family: arial;
+    color: #DFEDF3  ;
+    font-size: 100px;
+    text-shadow:0    0   2px #AFCAD6,
+               3px -2px 3px #89ADBD,
+              -2px -2px 4px #6892A4,
+               2px -4px 5px #487589,
+              -2px -6px 6px #2F5A6D,
+               0   -8px 7px #1A3F4F,
+               1px -9px 8px #0B2C3A;
+}
+
+
+
+#page{
+    position: absolute;
+    left:500px;
+    top:250px;
+}
+
+
+table{
+    border: medium solid #DFEDF3;
+    border-width:5px;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+}
+
+
+td, th{
+     border: solid #0B2C3A;
+     width : 400px;
+    text-align: center;
+    font-weight: italic
+}
+
+
+#pseudo{
+    color: #89ADBD;
+    border:6px solid ;
+    border-left-color: #12B8BD;
+    border-right-color: #7092BE;
+    border-bottom-color:#12B8BD;
+    border-top-color: #7092BE;
+    background-image: linear-gradient(#DFEDF3, #0B2C3A );
+    padding-bottom: 200px;
+    position: absolute;
+    top: 330px;
+    left:660px; 
+}
+
+
+#valeurpseudo{
+    position: absolute;
+    width: 500px;
+    top:450px ;
+    left:700px;
+    font-family: arial;
+    font-size: 60px;
+}
+
+
+#temps{
+    color: #DFEDF3;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    font-family: arial;
+    font-weight: italic;
+    text-shadow: 1px  -4px  2px #6892A4,
+                1px -6px 2px #1A3F4F;   
+}
+
+
+#jeu{
+    color: #797E85;
+    position: absolute;
+    top:220px ;
+    left:10px ;
+    border: 5px dashed #12B8BD;
+    padding-bottom: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+#jeu2{
+   color: #797E85;
+   position: absolute;
+    top:600px ;
+    left:10px ;
+}
+
+#regle{
+    text-align: center;
+    position:fixed;
+    top: 370px ;
+    left: 25px ;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+
+#start{
+    position:absolute;
+    background:orange;
+    color: black;
+    font-size: 50px;
+    font-family: Verdana, sans-serif;
+    font-style: strong;
+    font-weight: bold;
+    border-style: outset;
+    border-width: 5px;
+    top: 800px;
+    left: 875px;
+}
+
+#start:active{
+border-style: inset;
+}
+
+
+#sablier{
+ position: absolute;
+ top:200px ;
+ right:100px ;
+}
+
+
+#jeu_photo, #jeu_questions{
+    display:none;
+}
+
+
+#question{
+    position: absolute;
+    left: 425px;
+    width: 500px;
+    color: #1A3F4F;
+}
+
+
+  #prenom{
+    position: absolute;
+    top:250px;
+    left:10px;
+    color:#DFEDF3 ;
+    border:6px solid #0B2C3A ;
+}
+
+
+#score{
+    position:absolute;
+    width: 100px;
+    color: #DFEDF3;
+    
+}
+
+
+.reponse_a{
+    position:absolute;
+    top: 200px;
+    left:100px;   
+}
+
+.reponse_b{
+    position:absolute;
+    top: 200px;
+    left:400px; 
+}
+
+.reponse_c{
+    position:absolute;
+    top: 200px;
+    left:700px;   
+}
+
+.reponse_d{
+    position:absolute;
+    top: 475px;
+    left:100px;   
+}
+
+.reponse_e{
+    position:absolute;
+    top: 475px;
+    left:400px; 
+}
+
+.reponse_f{
+    position:absolute;
+    top: 475px;
+    left:700px;
+}
+
+.reponse_g{
+    position:absolute;
+    top: 700px;
+    left:100px; 
+}
+
+.reponse_h{
+    position:absolute;
+    top: 700px;
+    left:400px;
+}
+
+.reponse_i{
+    position:absolute;
+    top: 700px;
+    left:700px;
+}
+
+.reponse_j{
+    position:absolute;
+    top: 900px;
+    left:100px; 
+}
+
+.reponse_k{
+    position:absolute;
+    top: 900px;
+    left:400px;
+}
+
+.reponse_l{
+    position:absolute;
+    top: 900px;
+    left:700px;
+}
+
+
+#reponsea{
+    position: absolute;
+    top:175px;
+    left:125px;
+}
+
+
+#reponseb{
+    position: absolute;
+    top:175px;
+    left:425px;
+}
+
+
+#reponsec{
+    position: absolute;
+    top:175px;
+    left:725px;
+}
+
+
+#reponsed{
+    position: absolute;
+    top:450px;
+    left:125px;
+}
+
+
+#reponsee{
+    position: absolute;
+    top:450px;
+    left:425px;
+}
+
+
+#reponsef{
+    position: absolute;
+    top:450px;
+    left:725px;
+}
+
+
+#reponseg{
+    position: absolute;
+    top:675px;
+    left:125px;
+}
+
+
+#reponseh{
+    position: absolute;
+    top:675px;
+    left:425px;
+}
+
+
+#reponsei{
+    position: absolute;
+    top:675px;
+    left:725px;
+}
+
+#reponsej{
+    position: absolute;
+    top:875px;
+    left:125px;
+}
+
+
+#reponsek{
+    position: absolute;
+    top:875px;
+    left:425px;
+}
+
+
+#reponsel{
+    position: absolute;
+    top:875px;
+    left:725px;
+}
+
+
+a{
+    color: #DFEDF3 ;
+}
+
+
+.valider{
+    position:absolute;
+    background:orange;
+    color: black;
+    font-size: 50px;
+    font-family: Verdana, sans-serif;
+    font-style: strong;
+    font-weight: bold;
+    border-style: outset;
+    border-width: 5px;  
+    left:400px;
+}
+
+
+.valider:active{
+    border-style: inset;
+}
+
+
+#valider2{
+    top: 600px;
+    
+}
+
+#valider3{
+    top: 800px;
+    
+}
+
+#valider4{
+    top: 1000px;
+    
+}
+
+
+
+
+
+#compte{
+    font-size: 20px;
+    color:#DFEDF3;
+    position: absolute;
+    top:400px ;
+    right:70px;
+}
+
+
+#img{
+ position: absolute;
+ top:200px ;
+ right:100px ;
+}
+
+
+.image{
+    position:absolute;
+    position: center;
+    
+}
+
+#img1{
+  top:250px;
+  left:550px;  
+}   
+
+#img2{
+  top:250px;
+  left:550px;  
+}   
+
+#img3{
+  top:250px;
+  left:550px;  
+}   
+
+#img4{
+  top:250px;
+  left:650px;  
+}   
+
+#img5{
+  top:250px;
+  left:550px;  
+}   
+
+#img6{
+  top:250px;
+  left:500px;  
+}   
+
+#img7{
+  top:250px;
+  left:675px;  
+}   
+
+#img8{
+  top:250px;
+  left:675px;  
+}   
+
+#img9{
+  top:250px;
+  left:550px;  
+}   
+
+#img10{
+  top:250px;
+  left:550px;  
+}   
+
+
+#img1, #img2, #img3, #img4, #img5,#img6, #img7, #img8, #img9, #img10  {visibility: hidden;}
+
+
+.question1{
+    position:absolute;
+    top:100px;
+    left: 50px;
+    white-space:nowrap;
+}
+
+
+.question2{
+    position: absolute;
+    top:350px;
+    left:50px;
+    white-space:nowrap;
+}
+
+
+.question3{
+    position:absolute;
+    top:600px;
+    left:50px;
+    white-space:nowrap;
+}
+
+
+.question4{
+    position: absolute;
+    top: 800px;
+    left:50px;
+    white-space:nowrap;
+}
+
+
+
+
